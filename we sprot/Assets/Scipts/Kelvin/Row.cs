@@ -8,7 +8,7 @@ public class Row : MonoBehaviour
     private float randomValue;
 
     public bool rowStopped;
-    public string stoppedSlot;
+    public static string stoppedSlot;
 
     public GameObject wheelcan;
     public GameObject nextcan;

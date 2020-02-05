@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class LeftReady : MonoBehaviour
 {
     private Text m_TextComponent;
-    private bool ispressed = false;
+    public static bool ispressed = false;
     public static bool isReady;
     public GameObject ready;
     // Start is called before the first frame update

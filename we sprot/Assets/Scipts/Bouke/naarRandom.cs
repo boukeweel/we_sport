@@ -12,12 +12,16 @@ public class naarRandom : MonoBehaviour
 
     public static void SetBoolean()
     {
+        
+
         active = true;
     }
     public void Update()
     {
         if(active == true)
         {
+            StairScene.SetActive(true);
+            randomding.SetActive(false);
             time_wait += Time.deltaTime;
             if(time_wait > 5)
             {
@@ -27,6 +31,7 @@ public class naarRandom : MonoBehaviour
                 time_wait = 0;
             }
         }
+        
         
     }
 

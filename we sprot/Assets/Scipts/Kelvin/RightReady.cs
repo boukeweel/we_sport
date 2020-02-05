@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class RightReady : MonoBehaviour
 {
     private Text m_TextComponent;
-    private bool ispressed = false;
+    public static  bool ispressed = false;
     public static bool isReady;
     public GameObject ready;
     // Start is called before the first frame update
@@ -28,6 +28,10 @@ public class RightReady : MonoBehaviour
             ispressed = true;
         }
         else if (Input.GetKeyDown(KeyCode.RightShift) && ispressed)
+        {
+            
+        }
+        if (ispressed == false)
         {
             m_TextComponent.text = "Press Rshift if your ready";
             ispressed = false;

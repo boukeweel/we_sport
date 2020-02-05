@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Team1OefeningText : MonoBehaviour
 {
-    private int number = 0;
+    public static int number = 0;
     public List<Sprite> numbers;
     public Image ding;
     private int getal;
@@ -19,11 +19,11 @@ public class Team1OefeningText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        getal = number;
+        ding.sprite = numbers[getal];
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             number++;
-            getal = number;
-            ding.sprite = numbers[getal];
         }
     }
 }
