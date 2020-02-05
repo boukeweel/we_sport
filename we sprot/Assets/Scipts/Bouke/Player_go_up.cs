@@ -35,6 +35,6 @@ public class Player_go_up : MonoBehaviour
     }
     public void WinPlayer()
     {
-
+        
     }
 }
