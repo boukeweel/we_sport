@@ -24,6 +24,8 @@ public class UIManger : MonoBehaviour
     public string TeamName1;
     public string TeamName2;
 
+    
+
     //zetting all things that need to be zet
     private void Start()
     {
@@ -72,8 +74,11 @@ public class UIManger : MonoBehaviour
         Easy = true;
         DiffelcultyScreen.SetActive(false);
         GameScreen.SetActive(true);
+
         DeGamezelf.SetActive(true);
         SetTeamName();
+        naarRandom.SetBoolean();
+
     }
     //zettting the diffeculty to mideum and starting the game
     public void MideumButton()
@@ -83,6 +88,7 @@ public class UIManger : MonoBehaviour
         GameScreen.SetActive(true);
         DeGamezelf.SetActive(true);
         SetTeamName();
+        naarRandom.SetBoolean();
     }
     //zetting the diffeculty to hard and starting the game 
     public void HardButton()
@@ -92,6 +98,7 @@ public class UIManger : MonoBehaviour
         GameScreen.SetActive(true);
         DeGamezelf.SetActive(true);
         SetTeamName();
+        naarRandom.SetBoolean();
     }
     //zetting team names
     public void SetTeamName()
