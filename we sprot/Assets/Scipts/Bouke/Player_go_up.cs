@@ -20,6 +20,10 @@ public class Player_go_up : MonoBehaviour
                 MoveUP();
                 
             }
+            if (traptrede == 10)
+            {
+                WinPlayer();
+            }
             
         }
     }
@@ -27,6 +31,10 @@ public class Player_go_up : MonoBehaviour
     {
         traptrede++;
         transform.position = pos[traptrede].position;
+
+    }
+    public void WinPlayer()
+    {
 
     }
 }
