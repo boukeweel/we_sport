@@ -72,6 +72,7 @@ public class UIManger : MonoBehaviour
         Easy = true;
         DiffelcultyScreen.SetActive(false);
         GameScreen.SetActive(true);
+
         DeGamezelf.SetActive(true);
         SetTeamName();
     }
