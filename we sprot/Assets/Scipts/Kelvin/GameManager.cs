@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public GameObject canvas1;
     public GameObject canvas2;
     public GameObject canvas3;
+    public GameObject plankingTimer;
     public List<Sprite> countdown;
     public Image go;
     public Image countdownimage;
@@ -20,10 +21,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject imagesgo;
 
-    public static bool alesuit; 
+    public static bool alesuit;
+
     private void Update() 
     {
-
         WelkeAanZetten();
         nextscene();
         Iscorrect();
@@ -40,7 +41,7 @@ public class GameManager : MonoBehaviour
                 omabestrong.SetActive(false);
                 pushup.SetActive(false);
                 situps.SetActive(false);
-
+                
             }
             if (Row.stoppedSlot == "Lunges")
             {
@@ -57,6 +58,7 @@ public class GameManager : MonoBehaviour
                 jumpingjacks.SetActive(false);
                 pushup.SetActive(false);
                 situps.SetActive(false);
+              
             }
             if(Row.stoppedSlot == "Sit Ups")
             {
@@ -89,6 +91,7 @@ public class GameManager : MonoBehaviour
     }
     private void nextscene()
     {
+
         if (RightReady.isReady && LeftReady.isReady)
         {
             timer = timer - Time.deltaTime;
@@ -97,6 +100,8 @@ public class GameManager : MonoBehaviour
             {
                 countdownimage.sprite = countdown[0];
                 imagesgo.SetActive(false);
+                PlankingTimer.starttimer = false;
+                plankingTimer.SetActive(false);
             }
             if (timer < 2)
             {
@@ -113,7 +118,7 @@ public class GameManager : MonoBehaviour
                 downimage.SetActive(false);
                 imagesgo.SetActive(true);
                 go.sprite = countdown[3];
-                
+
                 if (timer < -1)
                 {
                     LeftReady.ispressed = false;
@@ -124,17 +129,14 @@ public class GameManager : MonoBehaviour
                     imagesgo.SetActive(false);
                     canvas1.SetActive(false);
                     canvas2.SetActive(true);
-
-                  
+                    plankingTimer.SetActive(true);
+                    PlankingTimer.starttimer = true;
                 }
-               
             }
-           
-            
+
         }
         else
             timer = 3;
-
     } 
     void Iscorrect()
     {

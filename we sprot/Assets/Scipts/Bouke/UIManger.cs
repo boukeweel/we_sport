@@ -36,6 +36,8 @@ public class UIManger : MonoBehaviour
 
     public static int moeilijkhijd;
 
+    public static float timer;
+
     //zetting all things that need to be zet
     private void Start()
     {
@@ -104,6 +106,7 @@ public class UIManger : MonoBehaviour
     {
         Easy = true;
         moeilijkhijd = 5;
+        timer = 30f;
         DiffelcultyScreen.SetActive(false);
         GameScreen.SetActive(true);
 
@@ -117,6 +120,7 @@ public class UIManger : MonoBehaviour
     {
         mideum = true;
         moeilijkhijd = 10;
+        timer = 60f;
         DiffelcultyScreen.SetActive(false);
         GameScreen.SetActive(true);
         DeGamezelf.SetActive(true);
@@ -128,6 +132,7 @@ public class UIManger : MonoBehaviour
     {
         hard = true;
         moeilijkhijd = 15;
+        timer = 90f;
         DiffelcultyScreen.SetActive(false);
         GameScreen.SetActive(true);
         DeGamezelf.SetActive(true);

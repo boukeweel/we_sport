@@ -21,7 +21,6 @@ public class Row : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(transform.position.y);
     }
     public void startRotating()
     {
