@@ -25,12 +25,12 @@ public class naarRandom : MonoBehaviour
     {
         if(active == true)
         {
-            if(p1.traptrede < 10 && p1.traptrede < 10)
+            if(p1.traptrede < 10 && p2.traptrede < 10)
             {
                 StairScene.SetActive(true);
                 randomding.SetActive(false);
                 time_wait += Time.deltaTime;
-                if (time_wait > 5)
+                if (time_wait > 4)
                 {
                     StairScene.SetActive(false);
                     randomding.SetActive(true);

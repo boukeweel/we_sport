@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
 
     public Player_go_up player1, player2;
 
+    public GameObject imagesgo;
+
     public static bool alesuit; 
     private void Update() 
     {
@@ -30,8 +32,9 @@ public class GameManager : MonoBehaviour
     {
         if(alesuit == false)
         {
-            if (Row.stoppedSlot == "Jumping Jack")
+            if (Row.stoppedSlot == "JumpingJacks")
             {
+                print("Jaditwerkt");
                 jumpingjacks.SetActive(true);
                 lunchlady.SetActive(false);
                 omabestrong.SetActive(false);
@@ -77,7 +80,7 @@ public class GameManager : MonoBehaviour
     private void AllesUit()
     {
         alesuit = true;
-        print("werkt?");
+        //print("werkt?");
         omabestrong.SetActive(false);
         lunchlady.SetActive(false);
         jumpingjacks.SetActive(false);
@@ -93,18 +96,22 @@ public class GameManager : MonoBehaviour
             if (timer < 3)
             {
                 countdownimage.sprite = countdown[0];
+                imagesgo.SetActive(false);
             }
             if (timer < 2)
             {
                 countdownimage.sprite = countdown[1];
+                imagesgo.SetActive(false);
             }
             if (timer < 1)
             {
                 countdownimage.sprite = countdown[2];
+                imagesgo.SetActive(false);
             }
             if (timer < 0)
             {
-                countdownimage.sprite = countdown[4];
+                downimage.SetActive(false);
+                imagesgo.SetActive(true);
                 go.sprite = countdown[3];
                 
                 if (timer < -1)
@@ -114,6 +121,7 @@ public class GameManager : MonoBehaviour
                     RightReady.isReady = false;
                     LeftReady.isReady = false;
                     downimage.SetActive(false);
+                    imagesgo.SetActive(false);
                     canvas1.SetActive(false);
                     canvas2.SetActive(true);
 
@@ -130,12 +138,12 @@ public class GameManager : MonoBehaviour
     } 
     void Iscorrect()
     {
-        if (Team2OefeningText.number == 5)
+        if (Team2OefeningText.number == UIManger.moeilijkhijd)
         {
             
             //canvas3.SetActive(true);
-
-            print("player2");
+            
+            //print("player2");
             Team2OefeningText.number = 0;
             Team1OefeningText.number = 0;
             AllesUit();
@@ -144,11 +152,11 @@ public class GameManager : MonoBehaviour
             naarRandom.SetBoolean();
             
         }
-        else if (Team1OefeningText.number == 5)
+        else if (Team1OefeningText.number == UIManger.moeilijkhijd)
         {
             
             //canvas3.SetActive(true);
-            print("palyer1");
+            //print("palyer1");
             Team1OefeningText.number = 0;
             Team2OefeningText.number = 0;
             AllesUit();

@@ -52,9 +52,10 @@ public class Row : MonoBehaviour
         }
             yield return new WaitForSeconds(timeInterval);
 
-            if (transform.position.y == 186f)
+            if (transform.position.y == 185f)
             {
-                stoppedSlot = "Jumping Jack";
+                
+                stoppedSlot = "JumpingJacks";
             }
             else if (transform.position.y == 363f)
             {
@@ -74,7 +75,8 @@ public class Row : MonoBehaviour
             }
             else if (transform.position.y == 1075f)
             {
-                stoppedSlot = "jumping jack";
+                print("werktdit?");
+                stoppedSlot = "JumpingJacks";
             }
         yield return new WaitForSeconds(1.5f);
         wheelcan.SetActive(false);

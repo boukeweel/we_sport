@@ -33,7 +33,8 @@ public class UIManger : MonoBehaviour
     public GameObject finishsceen;
 
     public Text team1, team2;
-    
+
+    public static int moeilijkhijd;
 
     //zetting all things that need to be zet
     private void Start()
@@ -46,6 +47,7 @@ public class UIManger : MonoBehaviour
         hard = false;
         DeGamezelf.SetActive(false);
         finishsceen.SetActive(false);
+        moeilijkhijd = 1;
     }
 
     private void Update()
@@ -55,7 +57,7 @@ public class UIManger : MonoBehaviour
         PlayerWhoWon();
 
         team1.text = TeamName1 + " is blue";
-        team2.text = TeamName2 + " is yellow";
+        team2.text = TeamName2 + " is red";
     }
 
     public void PlayerWhoWon()
@@ -101,6 +103,7 @@ public class UIManger : MonoBehaviour
     public void EasyButton()
     {
         Easy = true;
+        moeilijkhijd = 5;
         DiffelcultyScreen.SetActive(false);
         GameScreen.SetActive(true);
 
@@ -113,6 +116,7 @@ public class UIManger : MonoBehaviour
     public void MideumButton()
     {
         mideum = true;
+        moeilijkhijd = 10;
         DiffelcultyScreen.SetActive(false);
         GameScreen.SetActive(true);
         DeGamezelf.SetActive(true);
@@ -123,6 +127,7 @@ public class UIManger : MonoBehaviour
     public void HardButton()
     {
         hard = true;
+        moeilijkhijd = 15;
         DiffelcultyScreen.SetActive(false);
         GameScreen.SetActive(true);
         DeGamezelf.SetActive(true);

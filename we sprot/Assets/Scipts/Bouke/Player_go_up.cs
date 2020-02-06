@@ -12,31 +12,12 @@ public class Player_go_up : MonoBehaviour
     
 
     
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if(traptrede < 10)
-            {
-                
-                MoveUP();
-                
-            }
-            if (traptrede == 10)
-            {
-                WinPlayer();
-            }
-            
-        }
-    }
+    
     public void MoveUP()
     {
         traptrede++;
         transform.position = pos[traptrede].position;
 
     }
-    public void WinPlayer()
-    {
-        
-    }
+    
 }
