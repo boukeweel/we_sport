@@ -23,8 +23,20 @@ public class GameManager : MonoBehaviour
 
     public static bool alesuit;
 
+    bool eventest = false;
+
     private void Update() 
     {
+        if(eventest == false)
+        {
+            PlankingTimer.starttimer = false;
+            plankingTimer.SetActive(false);
+        }
+        if(eventest == true)
+        {
+            plankingTimer.SetActive(true);
+            PlankingTimer.starttimer = true;
+        }
         WelkeAanZetten();
         nextscene();
         Iscorrect();
@@ -100,8 +112,7 @@ public class GameManager : MonoBehaviour
             {
                 countdownimage.sprite = countdown[0];
                 imagesgo.SetActive(false);
-                PlankingTimer.starttimer = false;
-                plankingTimer.SetActive(false);
+                
             }
             if (timer < 2)
             {
@@ -129,8 +140,8 @@ public class GameManager : MonoBehaviour
                     imagesgo.SetActive(false);
                     canvas1.SetActive(false);
                     canvas2.SetActive(true);
-                    plankingTimer.SetActive(true);
-                    PlankingTimer.starttimer = true;
+                    eventest = true;
+                    
                 }
             }
 

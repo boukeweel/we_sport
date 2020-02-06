@@ -23,7 +23,7 @@ public class PlankingTimer : MonoBehaviour
 
     void Update()
     {
-        if (starttimer)
+        if (starttimer == true)
         {
             CountDown();
         }
