@@ -29,7 +29,10 @@ public class RightReady : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.RightShift) && ispressed)
         {
-            
+            m_TextComponent.text = "Press Rshift if your ready";
+            ispressed = false;
+            isReady = false;
+            ready.SetActive(false);
         }
         if (ispressed == false)
         {

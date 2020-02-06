@@ -1284,6 +1284,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e0ee2ddbcde309f46910241125e735db, type: 3}
   - {fileID: 21300000, guid: 4f99af1d5e13bf041a34ea53cc1672dd, type: 3}
   - {fileID: 21300000, guid: 1153dea41a4119749814487b14b31b41, type: 3}
+  - {fileID: 0}
   countdownimage: {fileID: 1231556941}
   downimage: {fileID: 1231556939}
   timer: 3
@@ -1951,7 +1952,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1171671761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2643,7 +2644,7 @@ PrefabInstance:
     - target: {fileID: 7792078618228652645, guid: 91449b550499bf0478286eac179d390e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7792078619921829822, guid: 91449b550499bf0478286eac179d390e,
         type: 3}

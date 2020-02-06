@@ -25,5 +25,6 @@ public class Team1OefeningText : MonoBehaviour
         {
             number++;
         }
+        
     }
 }

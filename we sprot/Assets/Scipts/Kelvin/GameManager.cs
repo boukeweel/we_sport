@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
         }
         else
             timer = 3;
-       
+
     } 
     void Iscorrect()
     {
@@ -69,20 +69,24 @@ public class GameManager : MonoBehaviour
             //canvas3.SetActive(true);
 
             print("player2");
+            Team2OefeningText.number = 0;
+            Team1OefeningText.number = 0;
             player2.MoveUP();
             canvas2.SetActive(false);
             naarRandom.SetBoolean();
-            Team2OefeningText.number = 0;
+            
         }
         else if (Team1OefeningText.number == 5)
         {
             
             //canvas3.SetActive(true);
             print("palyer1");
+            Team1OefeningText.number = 0;
+            Team2OefeningText.number = 0;
             player1.MoveUP();
             canvas2.SetActive(false);
             naarRandom.SetBoolean();
-            Team1OefeningText.number = 0;
+            
         }
     }
 
