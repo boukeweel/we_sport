@@ -21,6 +21,7 @@ public class Row : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        print(transform.position.y);
     }
     public void startRotating()
     {
@@ -33,10 +34,10 @@ public class Row : MonoBehaviour
 
         for (int i = 0; i < 30; i++)
         {
-            if (transform.position.y <= -345f)
-                transform.position = new Vector3(transform.position.x, 405,transform.position.z);
+            if (transform.position.y <= 186f)
+                transform.position = new Vector3(transform.position.x, 1075f, transform.position.z);
 
-            transform.position = new Vector3(transform.position.x, transform.position.y - 150f,transform.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y - 178f,transform.position.z);
 
             yield return new WaitForSeconds(timeInterval);
         }
@@ -44,34 +45,34 @@ public class Row : MonoBehaviour
 
         for (int i = 0; i < randomValue; i++)
         {
-            if (transform.position.y <= -345f)
-                transform.position = new Vector3(transform.position.x, 405, transform.position.z);
+            if (transform.position.y <= 186f)
+                transform.position = new Vector3(transform.position.x, 1075f, transform.position.z);
 
-            transform.position = new Vector3(transform.position.x, transform.position.y - 150f, transform.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y - 178f, transform.position.z);
         }
             yield return new WaitForSeconds(timeInterval);
 
-            if (transform.position.y == -345f)
+            if (transform.position.y == 186f)
             {
                 stoppedSlot = "Jumping Jack";
             }
-            else if (transform.position.y == -195f)
+            else if (transform.position.y == 363f)
             {
                 stoppedSlot = "Lunges";
             }
-            else if (transform.position.y == -45f)
+            else if (transform.position.y == 541f)
             {
                 stoppedSlot = "Push Ups";
             }
-            else if (transform.position.y == 105f)
+            else if (transform.position.y == 719f)
             {
                 stoppedSlot = "Sit Ups";
             }
-            else if (transform.position.y == 255f)
+            else if (transform.position.y == 897f)
             {
                 stoppedSlot = "Planken";
             }
-            else if (transform.position.y == 405f)
+            else if (transform.position.y == 1075f)
             {
                 stoppedSlot = "jumping jacks";
             }
