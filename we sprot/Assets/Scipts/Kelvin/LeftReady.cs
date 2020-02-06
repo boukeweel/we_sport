@@ -29,6 +29,10 @@ public class LeftReady : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.LeftShift) && ispressed)
         {
+            
+        }
+        if (ispressed == false)
+        {
             m_TextComponent.text = "Press Rshift if your ready";
             ispressed = false;
             isReady = false;
