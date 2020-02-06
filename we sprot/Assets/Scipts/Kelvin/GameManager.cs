@@ -47,7 +47,6 @@ public class GameManager : MonoBehaviour
         {
             if (Row.stoppedSlot == "JumpingJacks")
             {
-                print("Jaditwerkt");
                 jumpingjacks.SetActive(true);
                 lunchlady.SetActive(false);
                 omabestrong.SetActive(false);
@@ -140,7 +139,12 @@ public class GameManager : MonoBehaviour
                     imagesgo.SetActive(false);
                     canvas1.SetActive(false);
                     canvas2.SetActive(true);
-                    eventest = true;
+                    if (Row.stoppedSlot == "Planken")
+                    {
+                        eventest = true;
+                        canvas2.SetActive(false);
+                    }
+                    
                     
                 }
             }

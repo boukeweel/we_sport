@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlankingTimer : MonoBehaviour
 {
-    public float time;
+    public static float time;
 
     private string minutes;
     private string seconds;
@@ -13,6 +13,9 @@ public class PlankingTimer : MonoBehaviour
     public Text text;
 
     public static bool starttimer = false;
+
+    public GameObject gehaaldScene;
+    public GameObject plankingScene;
 
     private void Start()
     {
@@ -26,6 +29,11 @@ public class PlankingTimer : MonoBehaviour
         if (starttimer == true)
         {
             CountDown();
+        }
+        if (time < 0)
+        {
+            gehaaldScene.SetActive(true);
+            plankingScene.SetActive(false);
         }
     }
 

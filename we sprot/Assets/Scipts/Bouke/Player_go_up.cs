@@ -17,7 +17,6 @@ public class Player_go_up : MonoBehaviour
     {
         traptrede++;
         transform.position = pos[traptrede].position;
-
     }
     
 }
