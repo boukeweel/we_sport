@@ -13,11 +13,75 @@ public class GameManager : MonoBehaviour
     public GameObject downimage;
     public float timer = 3;
 
+    public GameObject jumpingjacks, lunchlady, omabestrong,pushup,situps;
+
     public Player_go_up player1, player2;
-    private void Update()
+
+    public static bool alesuit; 
+    private void Update() 
     {
+
+        WelkeAanZetten();
         nextscene();
         Iscorrect();
+    }
+    public void WelkeAanZetten()
+    {
+        if(alesuit == false)
+        {
+            if (Row.stoppedSlot == "Jumping Jack")
+            {
+                jumpingjacks.SetActive(true);
+                lunchlady.SetActive(false);
+                omabestrong.SetActive(false);
+                pushup.SetActive(false);
+                situps.SetActive(false);
+
+            }
+            if (Row.stoppedSlot == "Lunges")
+            {
+                lunchlady.SetActive(true);
+                jumpingjacks.SetActive(false);
+                omabestrong.SetActive(false);
+                pushup.SetActive(false);
+                situps.SetActive(false);
+            }
+            if (Row.stoppedSlot == "Planken")
+            {
+                omabestrong.SetActive(true);
+                lunchlady.SetActive(false);
+                jumpingjacks.SetActive(false);
+                pushup.SetActive(false);
+                situps.SetActive(false);
+            }
+            if(Row.stoppedSlot == "Sit Ups")
+            {
+                omabestrong.SetActive(false);
+                lunchlady.SetActive(false);
+                jumpingjacks.SetActive(false);
+                pushup.SetActive(false);
+                situps.SetActive(true);
+            }
+            if(Row.stoppedSlot == "Push Ups")
+            {
+                omabestrong.SetActive(false);
+                lunchlady.SetActive(false);
+                jumpingjacks.SetActive(false);
+                pushup.SetActive(true);
+                situps.SetActive(false);
+            }
+        }
+        
+    }
+    private void AllesUit()
+    {
+        alesuit = true;
+        print("werkt?");
+        omabestrong.SetActive(false);
+        lunchlady.SetActive(false);
+        jumpingjacks.SetActive(false);
+        pushup.SetActive(false);
+        situps.SetActive(false);
     }
     private void nextscene()
     {
@@ -71,6 +135,7 @@ public class GameManager : MonoBehaviour
             print("player2");
             Team2OefeningText.number = 0;
             Team1OefeningText.number = 0;
+            AllesUit();
             player2.MoveUP();
             canvas2.SetActive(false);
             naarRandom.SetBoolean();
@@ -83,6 +148,7 @@ public class GameManager : MonoBehaviour
             print("palyer1");
             Team1OefeningText.number = 0;
             Team2OefeningText.number = 0;
+            AllesUit();
             player1.MoveUP();
             canvas2.SetActive(false);
             naarRandom.SetBoolean();

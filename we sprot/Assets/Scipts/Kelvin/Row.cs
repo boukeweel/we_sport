@@ -78,6 +78,7 @@ public class Row : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         wheelcan.SetActive(false);
         nextcan.SetActive(true);
+        GameManager.alesuit = false;
         RondeText.ronde++;
     }
 }
