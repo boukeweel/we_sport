@@ -42,6 +42,7 @@ public class PlankingTimer : MonoBehaviour
         {
             starttimer = false;
             gehaaldScene.SetActive(true);
+            print("skip");
             FinistIt.SetBooleans();
             plankingScene.SetActive(false);
         }

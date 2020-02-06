@@ -23,10 +23,11 @@ public class GameManager : MonoBehaviour
 
     public static bool alesuit;
 
-    bool eventest = false;
+    public static bool eventest = false;
 
     private void Update() 
     {
+        print(eventest);
         if(eventest == false)
         {
             PlankingTimer.starttimer = false;
@@ -139,13 +140,15 @@ public class GameManager : MonoBehaviour
                     imagesgo.SetActive(false);
                     canvas1.SetActive(false);
                     canvas2.SetActive(true);
+                    
                     if (Row.stoppedSlot == "Planken")
                     {
                         eventest = true;
                         canvas2.SetActive(false);
                     }
-                    
-                    
+                    else
+                    eventest = false;
+
                 }
             }
 

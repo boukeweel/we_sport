@@ -1815,7 +1815,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &642246775
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2133,13 +2133,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 716273835}
+  - component: {fileID: 716273836}
   m_Layer: 0
   m_Name: gehaald
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &716273835
 Transform:
   m_ObjectHideFlags: 0
@@ -2155,6 +2156,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &716273836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716273834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eb26193e73c2f847b2e49e667eb61e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ltext: {fileID: 1344878436}
+  Rtext: {fileID: 491831096}
+  LDone: {fileID: 642246774}
+  RDone: {fileID: 1684981529}
+  p1: {fileID: 507861360}
+  p2: {fileID: 1713463830}
+  gehaald: {fileID: 716273834}
+  timerding: {fileID: 1474669945}
 --- !u!1 &728765270
 GameObject:
   m_ObjectHideFlags: 0
@@ -4611,7 +4632,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7087def3cee42fd479ae2917bf9bbfb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 30
   text: {fileID: 1474669947}
   gehaaldScene: {fileID: 716273834}
   plankingScene: {fileID: 2026311870}
@@ -7028,7 +7048,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1684981530
 RectTransform:
   m_ObjectHideFlags: 0
