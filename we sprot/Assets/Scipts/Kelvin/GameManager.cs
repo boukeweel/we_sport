@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject canvas2;
     public GameObject canvas3;
     public List<Sprite> countdown;
+    public Image go;
     public Image countdownimage;
     public GameObject downimage;
     public float timer = 3;
@@ -103,7 +104,9 @@ public class GameManager : MonoBehaviour
             }
             if (timer < 0)
             {
-                countdownimage.sprite = countdown[3];
+                countdownimage.sprite = countdown[4];
+                go.sprite = countdown[3];
+                
                 if (timer < -1)
                 {
                     LeftReady.ispressed = false;

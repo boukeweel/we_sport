@@ -10,6 +10,8 @@ public class Player_go_up : MonoBehaviour
     public int traptrede = 0;
 
     
+
+    
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))

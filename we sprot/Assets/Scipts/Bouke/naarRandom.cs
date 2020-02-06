@@ -8,28 +8,39 @@ public class naarRandom : MonoBehaviour
     public GameObject randomding;
 
     float time_wait;
-     static bool active;
+    static bool active;
 
+    public Player_go_up p1, p2;
+
+
+    private void Start()
+    {
+        active = false;
+    }
     public static void SetBoolean()
     {
-        
-
         active = true;
     }
     public void Update()
     {
         if(active == true)
         {
-            StairScene.SetActive(true);
-            randomding.SetActive(false);
-            time_wait += Time.deltaTime;
-            if(time_wait > 5)
+            if(p1.traptrede < 10 && p1.traptrede < 10)
             {
-                StairScene.SetActive(false);
-                randomding.SetActive(true);
-                active = false;
-                time_wait = 0;
+                StairScene.SetActive(true);
+                randomding.SetActive(false);
+                time_wait += Time.deltaTime;
+                if (time_wait > 5)
+                {
+                    StairScene.SetActive(false);
+                    randomding.SetActive(true);
+                    active = false;
+                    time_wait = 0;
+                }
             }
+            
+            
+            
         }
         
         

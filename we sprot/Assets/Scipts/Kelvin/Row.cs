@@ -74,7 +74,7 @@ public class Row : MonoBehaviour
             }
             else if (transform.position.y == 1075f)
             {
-                stoppedSlot = "jumping jacks";
+                stoppedSlot = "jumping jack";
             }
         yield return new WaitForSeconds(1.5f);
         wheelcan.SetActive(false);

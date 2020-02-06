@@ -18,6 +18,6 @@ public class RondeText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        m_TextComponent.text = "Ronde: " + ronde;
+        m_TextComponent.text = "Round: " + ronde;
     }
 }
