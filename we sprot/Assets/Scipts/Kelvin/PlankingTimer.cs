@@ -17,11 +17,19 @@ public class PlankingTimer : MonoBehaviour
     public GameObject gehaaldScene;
     public GameObject plankingScene;
 
+    
+
     private void Start()
     {
         text = GetComponent<Text>();
         Mathf.Clamp(time, 1f, 1000f);
+
+        Test();
+    }
+    public static void Test()
+    {
         time = UIManger.timer;
+        
     }
 
     void Update()
@@ -32,7 +40,9 @@ public class PlankingTimer : MonoBehaviour
         }
         if (time < 0)
         {
+            starttimer = false;
             gehaaldScene.SetActive(true);
+            FinistIt.SetBooleans();
             plankingScene.SetActive(false);
         }
     }
